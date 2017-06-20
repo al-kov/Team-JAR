@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row moveDown">
+    <h1 class="hero">Let's get started.</h1>
+
+<!--Create new user form-->
+    <div id="createAcc" ng-show="createAcc">
+      <h2>Please create an account:</h2>
+      <div class="form-group userInfo">
+        <div><input class="form-control" type="text" placeholder="Username" ng-model="username"></div>
+        <div><input class="form-control" type="password" placeholder="Password" ng-model="password1"></div>
+        <div><input class="form-control" type="password" placeholder="Re-enter Password" ng-model="password2"></div>
+        <div class="submitButton"><button class="btn btn-block btn-primary" ng-click="UserSubmit()">Submit</button></div>
+    <!--Warnings if information doesn't match, is not filled out, or username is already taken-->
+        <p ng-show="signUpWarn" class="warn">*Please Fill Out All Fields.</p>
+        <p ng-show="passwordWarn" class="warn">*Passwords Do Not Match.</p>
+        <p ng-show="usernameWarn" class="warn">*Username is Already Taken.</p>
+        <h2>-OR-</h2>
+        <div class="submitButton"><button class="btn btn-block btn-success" ng-click="SignInForm()">Sign In</button></div>
+      </div>
+    </div>
+
+    <!--Sign-in form -->
+    <div id="signInAcc" ng-show="signInAcc">
+      <h2>Sign In:</h2>
+      <div class="form-group userInfo">
+        <div>
+          <input class="form-control" type="text" placeholder="Username" ng-model="usernameSignIn">
+        </div>
+        <div>
+          <input class="form-control" type="password" placeholder="Password" ng-model="passwordSignIn">
+        </div>
+        <div class="submitButton"><button class="btn btn-block btn-primary" ng-click="SignIn()">Sign In</button></div>
+    <!--Warnings if information doesn't match-->
+        <p ng-show="signInWarn" class="warn">*Please Fill Out All Fields.</p>
+        <p ng-show="wrongInfoWarn" class="warn">*Username or Password is Incorrect</p>
+        <h2>-OR-</h2>
+        <div class="submitButton"><button class="btn btn-block btn-success" ng-click="CreateForm()">Create Acc</button></div>
+      </div>
+    </div>
+
+    <!--New Animal form!-->
+    <div id="createPost" ng-show="createPost">
+      <h2>Create new Post:</h2>
+      <h3>Signed Into: {{ SignedInUser }}</h3>
+      <div class="form-group userInfo">
+        <div><input class="form-control" type="text" placeholder="Name of Pet:" ng-model="name"></div>
+        <div><input class="form-control" type="text" placeholder="Type of Pet:" ng-model="type"></div>
+        <div><input class="form-control" type="text" placeholder="Breed:" ng-model="breed"></div>
+        <div><input class="form-control" type="text" placeholder="Color:" ng-model="color"></div>
+        <div><input class="form-control" type="text" placeholder="Size:" ng-model="size"></div>
+        <div><input class="form-control" type="text" placeholder="Is This Pet LOST or FOUND?" ng-model="lostOrFound"></div>
+        <div><input class="form-control" type="date" placeholder="Date Pet was Lost or Found" ng-model="date"></div>
+        <div><input class="form-control" type="text" placeholder="Street Address:" ng-model="address"></div>
+        <div><input class="form-control" type="text" placeholder="City:" ng-model="city"></div>
+        <div><input class="form-control" type="text" placeholder="State:" ng-model="state"></div>
+        <div><input class="form-control" type="text" placeholder="Zip:" ng-model="zip"></div>
+        <div><input class="form-control" type="text" placeholder="Image URL (if applicable):" ng-model="image"></div>
+        <div class="submitButton">
+          <button class="btn btn-block btn-primary" ng-click="animalSubmit()">Submit</button>
+          <p ng-show="postWarn" class="warn">*Please Fill Out All Feilds.</p>
+        </div>
+        <h2>-OR-</h2>
+        <div class="submitButton"><button class="btn btn-block btn-success" ng-click="SignInForm()">Sign In</button></div>
+      </div> <!-- End of div "userInfo" -->
+    </div> <!-- End of div "createPost" -->
+  </div> <!-- End of div "row moveDown" -->
+</div> <!-- End of div "container" -->
