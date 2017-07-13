@@ -16,6 +16,7 @@ jQuery
 
 
 ![Map Image](http://i.imgur.com/dx8XjNF.png)
+![Advice Image](http://i.imgur.com/tOcyBAA.png)
 
 
 
