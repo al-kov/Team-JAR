@@ -1,7 +1,7 @@
 # WELCOME HOME
 This mobile web application uses geographical location and user input to place lost pets back home with their families.  It includes an interactive map, pet images, and user profiles stored in a custom database. It also offers friendly advice for pet owners and their animals, along with success stories of reunited families.
 
-##Technologies
+## Technologies
 *This project uses the following:*
 HTML 5
 CSS 3
